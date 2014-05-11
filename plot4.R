@@ -1,6 +1,6 @@
 ## The below code reads data from household_power_consumption.txt file and creates a plot1.png file
 ## After the data hass been read in to the householdpower variable, the columns are converted into date and time fields
-## This data is filtered on Date field and then sent to png graphic device for plotting the histogram
+## This data is filtered on Date field and then sent to png graphic device for plotting
 
   householdpwr <- read.csv("household_power_consumption.txt",sep=";",na.strings="?")
   newdata <- paste(householdpwr$Date,householdpwr$Time)
@@ -9,7 +9,7 @@
   householdpwr$Date <- as.Date(householdpwr$Date,format="%d/%m/%Y")
   householdpwr2 <- subset(householdpwr, Date == "2007-02-01" | Date == "2007-02-02")
 
-  ## png device divide into 2 rows and 2 columns by using mfrow parameter
+  ## png device is divided into 2 rows and 2 columns by using mfrow parameter and then 4 plots are drawn
   png(filename="plot4.png",width=480,height=480)
   par(mfrow=c(2,2))
   plot(householdpwr2$Time,householdpwr2$Global_active_power,type="l",ylab="Global Active Power",xlab="")

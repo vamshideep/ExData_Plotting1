@@ -8,7 +8,8 @@
   householdpwr$Time <- newtime
   householdpwr$Date <- as.Date(householdpwr$Date,format="%d/%m/%Y")
   householdpwr2 <- subset(householdpwr, Date == "2007-02-01" | Date == "2007-02-02")
-  
+ 
+  # First a png device is initialized with 480 by 480 size and then plot creates graph
   png(filename="plot1.png",width=480,height=480)
   hist(householdpwr2$Global_active_power,main = "Global active Power",xlab="Global Active Power(kilowats)",ylab="Frequency",col="Red")
   dev.off()
