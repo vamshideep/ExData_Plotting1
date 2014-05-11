@@ -1,3 +1,6 @@
+## The below code reads data from household_power_consumption.txt file and creates a plot1.png file
+## After the data hass been read in to the householdpower variable, the columns are converted into date and time fields
+## This data is filtered on Date field and then sent to png graphic device for plotting the histogram
 
   householdpwr <- read.csv("household_power_consumption.txt",sep=";",na.strings="?")
   newdata <- paste(householdpwr$Date,householdpwr$Time)
