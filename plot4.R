@@ -18,6 +18,6 @@
   with(householdpwr2,lines(Time,Sub_metering_1,col="black"))
   with(householdpwr2,lines(Time,Sub_metering_2,col="red"))
   with(householdpwr2,lines(Time,Sub_metering_3,col="blue"))
-  legend("topright", lty = 1 , col = c("black","Red","blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"))
+  legend("topright", lty = 1 , col = c("black","Red","blue"), legend = c("Sub_metering_1", "Sub_metering_2","Sub_metering_3"),bty="n")
   plot(householdpwr2$Time,householdpwr2$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="datetime")
   dev.off()
